@@ -10,7 +10,7 @@ object Global extends GlobalSettings {
   override def onStart(app: Application) {
   	Logger.debug("Starting application")
   	Akka.system(app).scheduler.schedule(2 seconds, 10 seconds) {
-	  Logger.debug("Heartbeat")
+	  Logger.error("Heartbeat")
 	}
   }
   
